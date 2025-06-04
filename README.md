@@ -37,7 +37,7 @@
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Victor-SRamos/GRAFO.git
 ```
 
 2. Abra o arquivo `index.html` no seu navegador.
@@ -96,7 +96,7 @@ O arquivo JSON deve conter dois arrays: `nodes` e `edges`.
 
 ## 🎯 Screenshots
 
-| Construção de Grafo | Matriz Gerada |
+| Construção de Grafo | Caminhos gerados Gerada |
 |---------------------|---------------|
 | ![Grafo](PHOTO1.png) | ![Matriz](https://via.placeholder.com/400x200) |
 
@@ -125,4 +125,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para 
 
 ## 🚀 Autor
 
-Desenvolvido por [Victor](https://github.com/seu-usuario). 👩‍💻📚
+Desenvolvido por [Victor](https://github.com/Victor-SRamos). 👩‍💻📚
