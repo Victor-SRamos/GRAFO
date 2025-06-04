@@ -20,6 +20,7 @@
 - 📑 **Geração da Matriz de Adjacência** – Visualização clara e formatada.
 - 🗑️ **Apagar o Grafo** – Limpeza total com um clique.
 - 🎯 **Edição e Remoção de Arestas** – Clique na aresta para editar peso ou remover.
+- 📂 **Importação de JSON** – Importe grafos completos via arquivos `.json`.
 
 ---
 
@@ -59,6 +60,29 @@ a,b,5; b,c,2; c,a,7
 
 ---
 
+## 🗂️ Formato da Importação de JSON
+
+O arquivo JSON deve conter dois arrays: `nodes` e `edges`.
+
+### Estrutura:
+
+```json
+{
+  "nodes": [
+    { "id": "a", "label": "A", "color": "blue", "x": 100, "y": 150 },
+    { "id": "b", "label": "B", "color": "blue", "x": 200, "y": 250 }
+  ],
+  "edges": [
+    { "source": "a", "target": "b", "weight": 5 }
+  ]
+}
+```
+
+- **nodes**: cada nó deve ter `id` e `label`. As propriedades `color`, `x` e `y` são opcionais.
+- **edges**: cada aresta deve ter `source`, `target` e `weight`. O `id` da aresta pode ser omitido.
+
+---
+
 ## 🧠 Como Funciona
 
 - O sistema permite construir grafos **clicando diretamente no canvas**.
@@ -66,15 +90,15 @@ a,b,5; b,c,2; c,a,7
 - A qualquer momento, ative ou desative a opção de **grafo orientado**.
 - Clique em uma aresta para **editar seu peso ou removê-la**.
 - Insira matrizes manualmente no campo específico e veja o grafo se formar automaticamente.
+- Importe grafos completos no formato JSON, contendo nós e arestas.
 
 ---
 
 ## 🎯 Screenshots
 
 | Construção de Grafo | Matriz Gerada |
-|---------------------|----------------|
+|---------------------|---------------|
 | ![Grafo](PHOTO1.png) | ![Matriz](https://via.placeholder.com/400x200) |
-
 
 ---
 
