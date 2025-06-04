@@ -73,7 +73,7 @@ a,b,5; b,c,2; c,a,7
 
 | Construção de Grafo | Matriz Gerada |
 |---------------------|----------------|
-| ![Grafo](https://via.placeholder.com/400x200) | ![Matriz](https://via.placeholder.com/400x200) |
+| ![Grafo](PHOTO01.png) | ![Matriz](https://via.placeholder.com/400x200) |
 
 *(Adicione screenshots reais aqui depois!)*
 
