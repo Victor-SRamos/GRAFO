@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#menu {
+  background: #1f1f1f;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #2e2e2e;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #444;
+}
+
+#cy {
+  flex-grow: 1;
+  background: white;
+  position: relative;
+}
+
+#outputs {
+  background: #1f1f1f;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  height: 140px;
+  overflow-y: auto;
+  border-top: 1px solid #333;
+  white-space: pre-wrap;
+}
+
+#adjacencyMatrix {
+  background: #222;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre;
+  overflow-x: auto;
+  max-height: 120px;
+}
+
+label {
+  font-weight: normal;
+  user-select: none;
+}
+
+input[type="text"] {
+  background: #333;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  width: 250px;
+}
+
+#orientToggleLabel {
+  user-select: none;
+}

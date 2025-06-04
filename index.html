@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editor de Grafos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/cytoscape@3.24.1/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <div id="menu">
+    <button id="btnShortest">Menor Rota</button>
+    <button id="btnLongest">Maior Rota</button>
+    <button id="btnAllRoutes">Todas Rotas</button>
+    <button id="btnClearGraph" style="background:#a22;">Apagar Grafo</button>
+
+    <label id="orientToggleLabel" style="margin-left:20px;">
+      <input type="checkbox" id="orientToggle" /> Grafo Orientado
+    </label>
+
+    <label style="margin-left:20px;">Importar matriz (ex: a,b,3; b,a,44):</label>
+    <input type="text" id="matrixInput" placeholder="Digite separado por ;" />
+    <button id="btnImportMatrix">Importar Matriz</button>
+  </div>
+
+  <div id="cy"></div>
+
+  <div id="outputs">
+    <div id="routeResults" style="margin-bottom:8px;"></div>
+    <div id="adjacencyMatrix"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
