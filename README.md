@@ -117,12 +117,6 @@ Contribuições são bem-vindas! Abra uma *issue*, envie um *pull request* ou su
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
----
-
 ## 🚀 Autor
 
 Desenvolvido por [Victor](https://github.com/Victor-SRamos). 👩‍💻📚
