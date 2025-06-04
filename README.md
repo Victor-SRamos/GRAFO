@@ -75,7 +75,6 @@ a,b,5; b,c,2; c,a,7
 |---------------------|----------------|
 | ![Grafo](PHOTO1.png) | ![Matriz](https://via.placeholder.com/400x200) |
 
-*(Adicione screenshots reais aqui depois!)*
 
 ---
 
