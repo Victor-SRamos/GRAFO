@@ -108,6 +108,24 @@ function init() {
     const confirmClear = confirm("Tem certeza que deseja apagar todo o grafo?");
     if (confirmClear) clearGraph();
   };
+  document.getElementById('btnImportJson').onclick = () => {
+    const fileInput = document.getElementById('jsonFileInput');
+    if (fileInput.files.length === 0) {
+      alert("Selecione um arquivo JSON.");
+      return;
+    }
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target.result);
+        importGraphFromJson(data);
+      } catch (err) {
+        alert("Erro ao ler o JSON.");
+      }
+    };
+    reader.readAsText(file);
+  };
 
   showAdjacency();
   clearOutputs();
@@ -308,8 +326,7 @@ function importMatrixFromInput() {
     return;
   }
 
-  cy.elements().remove();
-  edgesData = [];
+  clearGraph();
 
   const nodesSet = new Set();
   for (const part of parts) {
@@ -339,6 +356,44 @@ function importMatrixFromInput() {
       position: { x: 50 + Math.random() * 700, y: 50 + Math.random() * 400 }
     });
   });
+  drawEdges();
+  showAdjacency();
+  clearOutputs();
+}
+
+function importGraphFromJson(data) {
+  if (!data.nodes || !data.edges) {
+    alert("JSON inválido. Esperado: { nodes: [...], edges: [...] }");
+    return;
+  }
+
+  clearGraph();
+
+  data.nodes.forEach(n => {
+    cy.add({
+      group: 'nodes',
+      data: {
+        id: n.id,
+        label: n.label || n.id,
+        color: n.color || 'blue'
+      },
+      position: {
+        x: n.x ?? 50 + Math.random() * 700,
+        y: n.y ?? 50 + Math.random() * 400
+      }
+    });
+  });
+
+  data.edges.forEach(e => {
+    const edgeId = e.id || (e.source + "_" + e.target + "_" + Date.now() + Math.random());
+    edgesData.push({
+      id: edgeId,
+      source: e.source,
+      target: e.target,
+      weight: e.weight ?? 1
+    });
+  });
+
   drawEdges();
   showAdjacency();
   clearOutputs();
